@@ -1,0 +1,66 @@
+print ("Welcome to the computer acoronym quiz")
+
+playing = input ("Do you want to play, if yes type yes, if no type no ")
+
+if playing == "no":
+  quit()
+else:
+   print("Then let the quiz begin")
+   print("Put all answers in all caps")
+
+answer = input("What does CPU stand for? ")
+if answer == "CENTRAL PROCESSING UNIT":
+  print('CORRECT!')
+else:
+    print("Incorrect!")
+    
+answer1 = input("What does GPU stand for? ")
+if answer1 == "GRAPHICS PROCESSING UNIT":
+  print('CORRECT!')
+else:
+    print("Incorrect!")
+    
+answer = input("What does LCD stand for? ")
+if answer == "LIQUID CRYSTAL DISPLAY":
+  print('Correct!')
+  score += 1
+else:
+    print("Incorrect!")
+
+answer = input("What does HDD stand for? ")
+if answer == "HARD DISK DRIVE":
+  print('Correct!')
+  score += 1
+else:
+    print("Incorrect!")
+
+answer = input("What does RAM stand for? ")
+if answer == "RANDOM ACCESS MEMORY":
+  print('Correct!')
+  score += 1
+else:
+    print("Incorrect!")
+
+answer = input("What does PSU stand for? ")
+if answer == "POWER SUPPLY UNIT":
+  print('Correct!')
+  score += 1
+else:
+    print("Incorrect!")
+  
+answer = input("What does LAN stand for? ")
+if answer == "LOCAL AREA NETWORK":
+  print('Correct!')
+  score += 1
+else:
+    print("Incorrect!")
+
+answer = input("What does API stand for? ")
+if answer == "APPLICATION PROGRAM INTERFACE":
+  print('Correct!')
+  score += 1
+else:
+    print("Incorrect!")
+
+print("You got " + str((score/7) * 100) + "%") 
+
