@@ -1,0 +1,37 @@
+def get_word(prompt):
+    """Prompt the user for a word and return the input."""
+    return input(prompt + " ")
+
+def generate_story(adjective1, noun1, verb1, noun2, adverb1, adjective2, verb2, noun3, place, adjective3):
+    """Generate a funny story using the provided words."""
+    story = (
+        f"Once upon a time in a {adjective1} land, there was a {noun1} who loved to {verb1}. "
+        f"One day, it found a {noun2} that was {adverb1} {verb2} in the forest. "
+        f"It decided to take the {noun2} to its {adjective2} {noun3}. "
+        f"At the {place}, everyone was {adjective3} to see the new {noun2}.\n"
+        f"And they all lived happily ever after!"
+    )
+    return story
+
+def madlibs_generator():
+    """Run the Mad Libs generator."""
+    # List of possible word prompts
+    prompts = [
+        "Enter an adjective", "Enter a noun", "Enter a verb", 
+        "Enter another noun", "Enter an adverb", "Enter another adjective", 
+        "Enter another verb", "Enter a third noun", "Enter a place", 
+        "Enter a final adjective"
+    ]
+
+    # Collect words from the user
+    words = [get_word(prompt) for prompt in prompts]
+
+    # Generate the story
+    story = generate_story(*words)
+    
+    # Print the generated story
+    print("\nHere's your funny story:\n")
+    print(story)
+
+# Run the Mad Libs generator
+madlibs_generator()
