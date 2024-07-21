@@ -1,0 +1,38 @@
+import random
+
+def roll():
+    min_value = 1
+    max_value = 6
+    roll = random.randint(min_value, max_value) 
+
+    return roll
+
+while True:
+    players = input("Enter amount of players (1-4): ")
+    if players.isdigit():
+        players = int(players)
+        if 1 <= players <= 4:
+            break
+            
+        else:
+            print("Must be between 1-4 players. Try again")
+    else:
+        print("Invalid, please try again")
+
+
+
+max_score = 50
+player_scores = [0 for in range(len(players))]
+
+print(player_scores)
+
+while max (player_scores) < max_score:
+
+    for player_idx in range(players):
+        print("\nPlayer Number", player_idx + 1 , "turn has just started!/n")
+        current_score = 0
+
+    while True:
+        should_roll = input("Would you like to roll (y)? ")
+        if should_roll.lower() != "y":
+            break
